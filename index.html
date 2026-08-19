@@ -1,206 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12TH MAN - Free Telegram Channel</title>
-    <!-- Importing a clean Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #0f1015; /* Dark premium background */
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 15px;
-        }
-
-        .container {
-            max-width: 400px;
-            width: 100%;
-            background-color: #1c1d22;
-            padding: 24px 20px; /* Slightly increased padding for better spacing */
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-            text-align: center;
-            border: 1px solid #2a2c33;
-        }
-
-        .alert-bar {
-            background: linear-gradient(90deg, #ff416c, #ff4b2b);
-            color: white;
-            padding: 8px 10px;
-            border-radius: 6px;
-            font-size: 14px; /* Increased from 11px */
-            font-weight: 600;
-            margin-bottom: 15px;
-            animation: pulse-alert 2s infinite;
-        }
-
-        @keyframes pulse-alert {
-            0% { opacity: 1; }
-            50% { opacity: 0.8; }
-            100% { opacity: 1; }
-        }
-
-        .profile-img {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #2AABEE; /* Telegram Blue */
-            margin-bottom: 10px;
-            background-color: #fff;
-        }
-
-        h1 {
-            font-size: 26px; /* Increased from 20px */
-            font-weight: 700;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
-        }
-
-        .subscribers {
-            color: #b0b3b8;
-            font-size: 15px; /* Increased from 12px */
-            margin-bottom: 6px;
-        }
-
-        .verified-badge {
-            color: #00d26a;
-            font-size: 14px; /* Increased from 12px */
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        .stats-box {
-            background-color: #24262d;
-            border: 1px solid #333640;
-            border-radius: 12px;
-            padding: 16px; /* Increased padding */
-            text-align: left;
-            font-size: 16px; /* Increased from 12px for better readability */
-            line-height: 1.6;
-            margin-bottom: 18px;
-        }
-
-        .stats-box b {
-            color: #f1c40f; /* Gold highlight for wins */
-        }
-
-        .timer-text {
-            color: #ff4b2b;
-            font-size: 16px; /* Increased from 13px */
-            font-weight: 700;
-            margin-bottom: 15px;
-        }
-
-        .join-btn {
-            display: block;
-            background: linear-gradient(90deg, #2AABEE, #2298d6);
-            color: white;
-            text-decoration: none;
-            font-size: 18px; /* Increased from 15px */
-            font-weight: 700;
-            padding: 16px;
-            border-radius: 30px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 15px rgba(42, 171, 238, 0.4);
-            transition: transform 0.2s;
-            animation: button-pop 1.5s infinite;
-        }
-
-        .join-btn:active {
-            transform: scale(0.96);
-        }
-
-        @keyframes button-pop {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.04); }
-            100% { transform: scale(1); }
-        }
-
-        .secure-tag {
-            font-size: 13px; /* Increased from 11px */
-            color: #00d26a;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .footer {
-            font-size: 12px; /* Increased from 10px */
-            color: #888;
-            line-height: 1.5;
-            margin-top: 15px;
-            border-top: 1px solid #333640;
-            padding-top: 15px;
-        }
-
-        .footer a {
-            color: #2AABEE;
-            text-decoration: none;
-        }
-    </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>12TH MAN - Free Telegram Channel</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',sans-serif;background-color:#0f1015;color:#fff;display:flex;justify-content:center;align-items:center;min-height:100vh;padding:10px}
+.container{max-width:340px;width:100%;background-color:#1c1d22;padding:20px 15px;border-radius:14px;box-shadow:0 8px 25px rgba(0,0,0,0.6);text-align:center;border:1px solid #2a2c33}
+.alert-bar{background:linear-gradient(90deg,#ff416c,#ff4b2b);color:#fff;padding:6px 8px;border-radius:6px;font-size:12px;font-weight:600;margin-bottom:12px;animation:pulse-alert 2s infinite}
+@keyframes pulse-alert{0%,100%{opacity:1}50%{opacity:0.8}}
+h1{font-size:22px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;justify-content:center;gap:5px}
+.subscribers{color:#b0b3b8;font-size:13px;margin-bottom:4px}
+.verified-badge{color:#00d26a;font-size:12px;font-weight:600;margin-bottom:15px}
+.stats-box{background-color:#24262d;border:1px solid #333640;border-radius:10px;padding:12px;text-align:left;font-size:14px;line-height:1.5;margin-bottom:15px}
+.stats-box b{color:#f1c40f}
+.timer-text{color:#ff4b2b;font-size:14px;font-weight:700;margin-bottom:12px}
+.join-btn{display:block;background:linear-gradient(90deg,#2AABEE,#2298d6);color:#fff;text-decoration:none;font-size:16px;font-weight:700;padding:12px;border-radius:25px;margin-bottom:12px;box-shadow:0 4px 15px rgba(42,171,238,0.4);transition:transform 0.2s;animation:button-pop 1.5s infinite}
+.join-btn:active{transform:scale(0.96)}
+@keyframes button-pop{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+.secure-tag{font-size:11px;color:#00d26a;font-weight:600;margin-bottom:12px}
+.footer{font-size:11px;color:#888;line-height:1.4;margin-top:12px;border-top:1px solid #333640;padding-top:12px}
+</style>
 </head>
 <body>
-
-    <div class="container">
-        <div class="alert-bar">🔥 Limited Invitation – Join Now & Earn Daily!</div>
-
-        <h1>12TH MAN™</h1>
-        <div class="subscribers">📢 61,739 Active Subscribers</div>
-        <div class="verified-badge">✅ 100% Verified Channel</div>
-
-        <div class="stats-box">
-            🏆 <b>No.1 Cricket Analyst Award</b><br>
-            ✅ IPL 2026: <b>70/74 PASS</b><br>
-            ✅ TNPL 2026: <b>30/30 PASS</b><br>
-            🔥 Currently winning daily in <b>CPL & TNPL</b><br><br>
-            💰 Join FREE Telegram & Earn <b>₹30,000 – ₹50,000 daily!</b>
-        </div>
-
-        <div class="timer-text" id="countdown">Invitation closes in 30s ⏳</div>
-
-        <!-- Dynamic Telegram Link applied here -->
-        <a href="https://telegram.dog/+xA3Jkbq4kfE3ODA1" class="join-btn" rel="noopener noreferrer" target="_blank">
-            🚀 JOIN FREE TELEGRAM NOW
-        </a>
-        
-        <div class="secure-tag">🔒 100% Safe | Free to Join | No Hidden Charges</div>
-
-        <div class="footer">
-            If you have Telegram you can view and join <br><b>12TH MAN™</b> instantly.<br><br>
-        </div>
-    </div>
-
-    <script>
-        // 30-Second Countdown Timer Script
-        let timeLeft = 30;
-        const countdownElement = document.getElementById('countdown');
-        
-        const timer = setInterval(() => {
-            timeLeft--;
-            if (timeLeft <= 0) {
-                clearInterval(timer);
-                countdownElement.innerHTML = "⏳ Invitation Expiring Soon!";
-                countdownElement.style.color = "#ff416c";
-            } else {
-                countdownElement.innerHTML = "Invitation closes in " + timeLeft + "s ⏳";
-            }
-        }, 1000);
-    </script>
-
+<div class="container">
+<div class="alert-bar">🔥 Limited Invitation – Join Now & Earn Daily!</div>
+<h1>12TH MAN™</h1>
+<div class="subscribers">📢 61,739 Active Subscribers</div>
+<div class="verified-badge">✅ 100% Verified Channel</div>
+<div class="stats-box">
+🏆 <b>No.1 Cricket Analyst Award</b><br>
+✅ IPL 2026: <b>70/74 PASS</b><br>
+✅ TNPL 2026: <b>30/30 PASS</b><br>
+🔥 Currently winning daily in <b>CPL & TNPL</b><br><br>
+💰 Join FREE Telegram & Earn <b>₹30k – ₹50k daily!</b>
+</div>
+<div class="timer-text" id="countdown">Invitation closes in 30s ⏳</div>
+<a href="https://telegram.dog/+xA3Jkbq4kfE3ODA1" class="join-btn" rel="noopener noreferrer" target="_blank">🚀 JOIN FREE TELEGRAM NOW</a>
+<div class="secure-tag">🔒 100% Safe | Free to Join | No Hidden Charges</div>
+<div class="footer">If you have Telegram you can view and join <br><b>12TH MAN™</b> instantly.</div>
+</div>
+<script>
+let t=30,c=document.getElementById('countdown'),i=setInterval(()=>{t--;if(t<=0){clearInterval(i);c.innerHTML="⏳ Invitation Expiring Soon!";c.style.color="#ff416c"}else{c.innerHTML="Invitation closes in "+t+"s ⏳"}},1000);
+</script>
 </body>
 </html>
