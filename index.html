@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12th Man - India's Best Fantasy Sports App</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        
+        /* Header & Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: #080808;
+            border-bottom: 2px solid #00e676;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+        .logo span {
+            color: #00e676;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 30px;
+        }
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #00e676;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 8%;
+            background: linear-gradient(135deg, #121212 0%, #0d3b23 100%);
+            min-height: 80vh;
+        }
+        .hero-content {
+            flex-basis: 50%;
+        }
+        .hero-content h1 {
+            font-size: 55px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        .hero-content h1 span {
+            color: #00e676;
+        }
+        .hero-content p {
+            font-size: 18px;
+            color: #cccccc;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: #00e676;
+            color: #000000;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 230, 118, 0.4);
+        }
+        .hero-image {
+            flex-basis: 45%;
+            text-align: center;
+        }
+        .hero-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 8%;
+            background-color: #1a1a1a;
+            text-align: center;
+        }
+        .features h2 {
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+        .features-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        .feature-box {
+            background-color: #252525;
+            padding: 40px 20px;
+            border-radius: 15px;
+            flex-basis: 32%;
+            transition: transform 0.3s ease;
+        }
+        .feature-box:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid #00e676;
+        }
+        .feature-box h3 {
+            font-size: 24px;
+            color: #00e676;
+            margin-bottom: 15px;
+        }
+        .feature-box p {
+            color: #bbbbbb;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #080808;
+            color: #666666;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 50px 5%;
+            }
+            .hero-content {
+                margin-bottom: 50px;
+            }
+            .features-grid {
+                flex-direction: column;
+            }
+            nav ul {
+                display: none; /* Add JS hamburger menu for mobile if needed */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">12th<span>Man</span></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-to-play">How to Play</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Build Your <span>Dream Team</span> & Win Big!</h1>
+            <p>Join millions of sports fans on 12th Man. Use your sports knowledge, create your fantasy cricket or football team, and win real cash prizes daily.</p>
+            <a href="#download" class="btn">Download App Now</a>
+        </div>
+        <div class="hero-image">
+            <!-- Placeholder for App Image -->
+            <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Sports Stadium">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2>Why Choose 12th Man?</h2>
+        <div class="features-grid">
+            <div class="feature-box">
+                <h3>Real-time Scores</h3>
+                <p>Get live match updates and track your fantasy team's performance second by second.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Instant Withdrawals</h3>
+                <p>Win real cash and withdraw your winnings instantly to your bank account securely.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Mega Contests</h3>
+                <p>Participate in grand leagues and compete with top players to win massive prizes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 12th Man Fantasy Sports. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
