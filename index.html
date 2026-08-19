@@ -3,203 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12th Man - No. 1 Tipper</title>
-    <!-- FontAwesome icons ke liye link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>12TH MAN - Free Telegram Channel</title>
+    <!-- Importing a clean Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0c1421; /* Dark background */
-            color: #ffffff;
+        * {
+            box-sizing: border-box;
             margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             padding: 0;
         }
 
-        /* Browser Bar simulation */
-        .browser-bar {
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f1015; /* Dark premium background */
+            color: #ffffff;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            background-color: #1a2536; /* Slightly lighter top bar */
-            padding: 10px 15px;
-            box-sizing: border-box;
-            border-bottom: 1px solid #2e3b4e;
-        }
-
-        .icons-left, .icons-right {
-            display: flex;
-            gap: 15px;
-            color: #b0b0b0;
-            font-size: 1.2em;
-        }
-
-        .title-bar {
-            text-align: center;
-            flex-grow: 1;
-        }
-
-        .site-title {
-            font-weight: bold;
-            font-size: 0.9em;
-        }
-
-        .site-url {
-            font-size: 0.75em;
-            color: #b0b0b0;
-        }
-
-        /* Main content container */
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 90%;
-            max-width: 400px; /* Mobile width constraint */
-            margin-top: 40px;
-            text-align: center;
-        }
-
-        .top-tag {
-            background-color: #ff0000; /* Red tag */
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8em;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            color: #ffd700; /* Gold/Yellow title */
-            font-size: 3em;
-            margin: 0 0 10px 0;
-            font-weight: bold;
-        }
-
-        .pass-guarantee {
-            color: #00ff00; /* Green sub-title */
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 30px;
-        }
-
-        .accuracy-box {
-            background-color: #313d4f; /* Grey box */
-            padding: 15px;
-            border-radius: 10px;
-            width: 100%;
-            margin-bottom: 20px;
-            box-sizing: border-box;
-        }
-
-        .accuracy-box p {
-            margin: 5px 0;
-            font-size: 1em;
-            color: #b0b0b0;
-        }
-
-        .accuracy-percentage {
-            color: #ffd700;
-            font-weight: bold;
-        }
-
-        .timer-box {
-            background-color: #f7f7f7; /* White box */
-            border: 2px dashed #ff0000; /* Red dashed border */
-            color: #ff0000;
-            padding: 15px;
-            border-radius: 10px;
-            width: 100%;
-            margin-bottom: 30px;
-            box-sizing: border-box;
-        }
-
-        .timer-box p {
-            margin: 0;
-            font-size: 1em;
-            font-weight: bold;
-        }
-
-        .timer-box .expire-time {
-            font-size: 2em;
-            color: #0c1421;
-        }
-
-        /* The main Telegram button */
-        .telegram-button {
-            background-color: #0088cc; /* Telegram Blue */
-            color: white;
-            text-decoration: none;
-            padding: 15px 30px;
-            border-radius: 10px;
-            font-size: 1.3em;
-            font-weight: bold;
-            width: 100%;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            gap: 10px;
-            box-sizing: border-box;
-            margin-bottom: 15px;
+            align-items: center;
+            min-height: 100vh;
+            padding: 15px;
         }
 
-        .telegram-button i {
-            font-size: 1.4em;
+        .container {
+            max-width: 420px;
+            width: 100%;
+            background-color: #1c1d22;
+            padding: 25px 20px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+            text-align: center;
+            border: 1px solid #2a2c33;
         }
 
-        .spots-left {
-            color: #ffd700;
-            font-size: 0.9em;
-            font-weight: bold;
+        .alert-bar {
+            background: linear-gradient(90deg, #ff416c, #ff4b2b);
+            color: white;
+            padding: 8px 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            animation: pulse-alert 2s infinite;
         }
 
-        /* --- BLINKING ANIMATION --- */
-        @keyframes blink {
+        @keyframes pulse-alert {
             0% { opacity: 1; }
-            50% { opacity: 0.3; } /* Thoda dim hota hai beech mein */
+            50% { opacity: 0.8; }
             100% { opacity: 1; }
         }
 
-        .blinking-button {
-            animation: blink 1.2s infinite; /* 1.2 seconds mein ek blink, infinite chalta rahega */
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #2AABEE; /* Telegram Blue */
+            margin-bottom: 12px;
+            background-color: #fff;
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .subscribers {
+            color: #b0b3b8;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .verified-badge {
+            color: #00d26a;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .stats-box {
+            background-color: #24262d;
+            border: 1px solid #333640;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: left;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .stats-box b {
+            color: #f1c40f; /* Gold highlight for wins */
+        }
+
+        .timer-text {
+            color: #ff4b2b;
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .join-btn {
+            display: block;
+            background: linear-gradient(90deg, #2AABEE, #2298d6);
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 16px;
+            border-radius: 30px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(42, 171, 238, 0.4);
+            transition: transform 0.2s;
+            animation: button-pop 1.5s infinite;
+        }
+
+        .join-btn:active {
+            transform: scale(0.96);
+        }
+
+        @keyframes button-pop {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.04); }
+            100% { transform: scale(1); }
+        }
+
+        .secure-tag {
+            font-size: 12px;
+            color: #00d26a;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            font-size: 12px;
+            color: #888;
+            line-height: 1.5;
+            margin-top: 10px;
+            border-top: 1px solid #333640;
+            padding-top: 15px;
+        }
+
+        .footer a {
+            color: #2AABEE;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
 
-               <div class="site-url">pcrickettipper-tipper.github.io</div>
-        </div>
-        <div class="icons-right"><i class="fas fa-share-alt"></i> <i class="fas fa-ellipsis-v"></i></div>
-    </div>
-
-    <!-- Main Landing Page Content -->
     <div class="container">
-        <div class="top-tag">🔥 NO. 1 TIPPER IN MARKET 🔥</div>
+        <div class="alert-bar">🔥 Limited Invitation – Join Now & Earn Daily!</div>
+
+        <!-- Replace 'YOUR_IMAGE_URL_HERE' with your actual logo link -->
+        <img src="https://via.placeholder.com/150/2AABEE/FFFFFF?text=12TH+MAN" alt="12TH MAN Logo" class="profile-img">
         
-        <h1>12TH MAN</h1>
-        
-        <p class="pass-guarantee">BACK TO BACK PASS GUARANTEE</p>
-        
-        <div class="accuracy-box">
-            <p>Match Winner | Session | Toss</p>
-            <p>Accuracy: <span class="accuracy-percentage">98%</span></p>
+        <h1>12TH MAN™</h1>
+        <div class="subscribers">📢 155,739 Active Subscribers</div>
+        <div class="verified-badge">✅ 100% Verified Channel</div>
+
+        <div class="stats-box">
+            🏆 <b>No.1 Cricket Analyst Award</b><br>
+            ✅ IPL 2026: <b>70/74 PASS</b><br>
+            ✅ TNPL 2026: <b>30/30 PASS</b><br>
+            🔥 Currently winning daily in <b>Men’s 100 League</b><br><br>
+            💰 Join FREE Telegram & Earn <b>₹30,000 – ₹50,000 daily!</b>
         </div>
-        
-        <div class="timer-box">
-            <p>WARNING: FREE LINK EXPIRES IN</p>
-            <p class="expire-time">02:56</p>
-        </div>
-        
-        <!-- The Blinking Button -->
-        <a href="#" class="telegram-button blinking-button">
-            <i class="fab fa-telegram-plane"></i> JOIN TELEGRAM FREE
+
+        <div class="timer-text" id="countdown">Invitation closes in 30s ⏳</div>
+
+        <!-- Dynamic Telegram Link applied here -->
+        <a href="https://telegram.dog/+xA3Jkbq4kfE3ODA1" class="join-btn" rel="noopener noreferrer" target="_blank">
+            🚀 JOIN FREE TELEGRAM NOW
         </a>
         
-        <p class="spots-left">Hurry! Only 14 Free Spots Left.</p>
+        <div class="secure-tag">🔒 100% Safe | Free to Join | No Hidden Charges</div>
+
+        <div class="footer">
+            If you have Telegram you can view and join <br><b>12TH MAN™</b> instantly.<br><br>
+        </div>
     </div>
+
+    <script>
+        // 30-Second Countdown Timer Script
+        let timeLeft = 30;
+        const countdownElement = document.getElementById('countdown');
+        
+        const timer = setInterval(() => {
+            timeLeft--;
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                countdownElement.innerHTML = "⏳ Invitation Expiring Soon!";
+                countdownElement.style.color = "#ff416c";
+            } else {
+                countdownElement.innerHTML = "Invitation closes in " + timeLeft + "s ⏳";
+            }
+        }, 1000);
+    </script>
 
 </body>
 </html>
