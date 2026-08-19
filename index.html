@@ -3,223 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12th Man - India's Best Fantasy Sports App</title>
+    <title>12th Man - No. 1 Tipper</title>
+    <!-- FontAwesome icons ke liye link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* General Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
         body {
-            background-color: #121212;
+            font-family: Arial, sans-serif;
+            background-color: #0c1421; /* Dark background */
             color: #ffffff;
-        }
-        
-        /* Header & Navigation */
-        header {
+            margin: 0;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            padding: 20px 8%;
-            background-color: #080808;
-            border-bottom: 2px solid #00e676;
-        }
-        .logo {
-            font-size: 28px;
-            font-weight: 800;
-            color: #ffffff;
-            letter-spacing: 1px;
-        }
-        .logo span {
-            color: #00e676;
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        nav ul li {
-            margin-left: 30px;
-        }
-        nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 16px;
-            transition: color 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #00e676;
+            padding: 0;
         }
 
-        /* Hero Section */
-        .hero {
+        /* Browser Bar simulation */
+        .browser-bar {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            padding: 80px 8%;
-            background: linear-gradient(135deg, #121212 0%, #0d3b23 100%);
-            min-height: 80vh;
+            align-items: center;
+            width: 100%;
+            background-color: #1a2536; /* Slightly lighter top bar */
+            padding: 10px 15px;
+            box-sizing: border-box;
+            border-bottom: 1px solid #2e3b4e;
         }
-        .hero-content {
-            flex-basis: 50%;
+
+        .icons-left, .icons-right {
+            display: flex;
+            gap: 15px;
+            color: #b0b0b0;
+            font-size: 1.2em;
         }
-        .hero-content h1 {
-            font-size: 55px;
-            line-height: 1.2;
+
+        .title-bar {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .site-title {
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .site-url {
+            font-size: 0.75em;
+            color: #b0b0b0;
+        }
+
+        /* Main content container */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            max-width: 400px; /* Mobile width constraint */
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .top-tag {
+            background-color: #ff0000; /* Red tag */
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8em;
             margin-bottom: 20px;
         }
-        .hero-content h1 span {
-            color: #00e676;
-        }
-        .hero-content p {
-            font-size: 18px;
-            color: #cccccc;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-        .btn {
-            display: inline-block;
-            padding: 15px 40px;
-            background-color: #00e676;
-            color: #000000;
-            text-decoration: none;
-            font-size: 18px;
+
+        h1 {
+            color: #ffd700; /* Gold/Yellow title */
+            font-size: 3em;
+            margin: 0 0 10px 0;
             font-weight: bold;
-            border-radius: 30px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 230, 118, 0.4);
-        }
-        .hero-image {
-            flex-basis: 45%;
-            text-align: center;
-        }
-        .hero-image img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
         }
 
-        /* Features Section */
-        .features {
-            padding: 80px 8%;
-            background-color: #1a1a1a;
-            text-align: center;
+        .pass-guarantee {
+            color: #00ff00; /* Green sub-title */
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 30px;
         }
-        .features h2 {
-            font-size: 36px;
-            margin-bottom: 50px;
+
+        .accuracy-box {
+            background-color: #313d4f; /* Grey box */
+            padding: 15px;
+            border-radius: 10px;
+            width: 100%;
+            margin-bottom: 20px;
+            box-sizing: border-box;
         }
-        .features-grid {
+
+        .accuracy-box p {
+            margin: 5px 0;
+            font-size: 1em;
+            color: #b0b0b0;
+        }
+
+        .accuracy-percentage {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        .timer-box {
+            background-color: #f7f7f7; /* White box */
+            border: 2px dashed #ff0000; /* Red dashed border */
+            color: #ff0000;
+            padding: 15px;
+            border-radius: 10px;
+            width: 100%;
+            margin-bottom: 30px;
+            box-sizing: border-box;
+        }
+
+        .timer-box p {
+            margin: 0;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        .timer-box .expire-time {
+            font-size: 2em;
+            color: #0c1421;
+        }
+
+        /* The main Telegram button */
+        .telegram-button {
+            background-color: #0088cc; /* Telegram Blue */
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 1.3em;
+            font-weight: bold;
+            width: 100%;
             display: flex;
-            justify-content: space-between;
-            gap: 30px;
-        }
-        .feature-box {
-            background-color: #252525;
-            padding: 40px 20px;
-            border-radius: 15px;
-            flex-basis: 32%;
-            transition: transform 0.3s ease;
-        }
-        .feature-box:hover {
-            transform: translateY(-10px);
-            border-bottom: 4px solid #00e676;
-        }
-        .feature-box h3 {
-            font-size: 24px;
-            color: #00e676;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-sizing: border-box;
             margin-bottom: 15px;
         }
-        .feature-box p {
-            color: #bbbbbb;
-            font-size: 16px;
-            line-height: 1.5;
+
+        .telegram-button i {
+            font-size: 1.4em;
         }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 30px;
-            background-color: #080808;
-            color: #666666;
-            font-size: 14px;
+        .spots-left {
+            color: #ffd700;
+            font-size: 0.9em;
+            font-weight: bold;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                padding: 50px 5%;
-            }
-            .hero-content {
-                margin-bottom: 50px;
-            }
-            .features-grid {
-                flex-direction: column;
-            }
-            nav ul {
-                display: none; /* Add JS hamburger menu for mobile if needed */
-            }
+        /* --- BLINKING ANIMATION --- */
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; } /* Thoda dim hota hai beech mein */
+            100% { opacity: 1; }
+        }
+
+        .blinking-button {
+            animation: blink 1.2s infinite; /* 1.2 seconds mein ek blink, infinite chalta rahega */
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="logo">12th<span>Man</span></div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#how-to-play">How to Play</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Build Your <span>Dream Team</span> & Win Big!</h1>
-            <p>Join millions of sports fans on 12th Man. Use your sports knowledge, create your fantasy cricket or football team, and win real cash prizes daily.</p>
-            <a href="#download" class="btn">Download App Now</a>
+    <!-- Browser Bar simulation (just for context) -->
+    <div class="browser-bar">
+        <div class="icons-left"><i class="fas fa-times"></i> <i class="fas fa-chevron-down"></i></div>
+        <div class="title-bar">
+            <div class="site-title">12Th Man - No. 1 Tipper</div>
+            <div class="site-url">pcrickettipper-tipper.github.io</div>
         </div>
-        <div class="hero-image">
-            <!-- Placeholder for App Image -->
-            <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Sports Stadium">
-        </div>
-    </section>
+        <div class="icons-right"><i class="fas fa-share-alt"></i> <i class="fas fa-ellipsis-v"></i></div>
+    </div>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <h2>Why Choose 12th Man?</h2>
-        <div class="features-grid">
-            <div class="feature-box">
-                <h3>Real-time Scores</h3>
-                <p>Get live match updates and track your fantasy team's performance second by second.</p>
-            </div>
-            <div class="feature-box">
-                <h3>Instant Withdrawals</h3>
-                <p>Win real cash and withdraw your winnings instantly to your bank account securely.</p>
-            </div>
-            <div class="feature-box">
-                <h3>Mega Contests</h3>
-                <p>Participate in grand leagues and compete with top players to win massive prizes.</p>
-            </div>
+    <!-- Main Landing Page Content -->
+    <div class="container">
+        <div class="top-tag">🔥 NO. 1 TIPPER IN MARKET 🔥</div>
+        
+        <h1>12TH MAN</h1>
+        
+        <p class="pass-guarantee">BACK TO BACK PASS GUARANTEE</p>
+        
+        <div class="accuracy-box">
+            <p>Match Winner | Session | Toss</p>
+            <p>Accuracy: <span class="accuracy-percentage">98%</span></p>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 12th Man Fantasy Sports. All rights reserved.</p>
-    </footer>
+        
+        <div class="timer-box">
+            <p>WARNING: FREE LINK EXPIRES IN</p>
+            <p class="expire-time">02:56</p>
+        </div>
+        
+        <!-- The Blinking Button -->
+        <a href="#" class="telegram-button blinking-button">
+            <i class="fab fa-telegram-plane"></i> JOIN TELEGRAM FREE
+        </a>
+        
+        <p class="spots-left">Hurry! Only 14 Free Spots Left.</p>
+    </div>
 
 </body>
 </html>
